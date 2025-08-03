@@ -9,35 +9,67 @@
     body {
       background-color: #000;
       color: #fff;
+      font-family: Arial, sans-serif;
       text-align: center;
-      padding-top: 80px;
-      font-family: 'Arial', sans-serif;
+      padding: 40px 20px;
     }
+
     h1 {
-      margin-bottom: 40px;
+      font-size: 1.8rem;
+      margin-bottom: 20px;
     }
+
+    p {
+      font-size: 1rem;
+      color: #bbb;
+    }
+
     .countdown {
-      font-size: 30px;
       display: flex;
+      flex-wrap: wrap;
       justify-content: center;
-      gap: 20px;
+      gap: 15px;
+      margin-top: 30px;
     }
+
     .countdown div {
       background: #111;
-      padding: 20px;
+      padding: 15px 20px;
       border-radius: 10px;
-      box-shadow: 0 0 10px #2e06b1;
+      box-shadow: 0 0 10px #1b5dff;
+      min-width: 70px;
     }
+
+    .countdown span {
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+
     .label {
-      font-size: 16px;
-      color: #ccc;
+      font-size: 0.8rem;
       margin-top: 5px;
+      color: #ccc;
+    }
+
+    @media (min-width: 600px) {
+      h1 {
+        font-size: 2.5rem;
+      }
+
+      .countdown span {
+        font-size: 2rem;
+      }
+
+      .label {
+        font-size: 1rem;
+      }
     }
   </style>
 </head>
 <body>
   <h1>Transfer Window Countdown</h1>
   <p>From 3rd August 2025 to 1st September 2025</p>
+
   <div class="countdown" id="countdown">
     <div><span id="days">00</span><div class="label">Days</div></div>
     <div><span id="hours">00</span><div class="label">Hours</div></div>
